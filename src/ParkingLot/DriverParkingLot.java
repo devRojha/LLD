@@ -43,7 +43,7 @@ public class DriverParkingLot {
 
         double amount = Ticket.priceCalculation(truckTicket);
 
-        PaymentStrategy cashPayment = new UPIPayments();
+        PaymentStrategy cashPayment = new CashPayment();
         cashPayment.payAmount(amount);
 
         parkingLot.vacateParkingSpot(truck);
